@@ -8,7 +8,7 @@ const domain = process.env.PRODUCTION_DOMAIN;
 const prodConfig = {
   mode: "production",
   output: {
-    publicPath: "/dist/",
+    publicPath: "/",
   },
   // output: {
   //   filename: "[name].[contenthash].js",
@@ -23,6 +23,11 @@ const prodConfig = {
   //       "./StylesApp": "./src/bootstrap",
   //     },
   //     shared: packageJson.dependencies,
+  //   }),
+  // ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: "./public/index.html",
   //   }),
   // ],
 };
