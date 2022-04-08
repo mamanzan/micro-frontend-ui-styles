@@ -7,20 +7,6 @@ const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: "production",
-  module: {
-    rules: [
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: { outputPath: "css/", name: "[name].min.css" },
-          },
-          "sass-loader",
-        ],
-      },
-    ],
-  },
   output: {
     filename: "[name].[contenthash].js",
     publicPath: "/StylesApp/latest/",
@@ -39,3 +25,12 @@ const prodConfig = {
 };
 
 module.exports = merge(commonConfig, prodConfig);
+
+// use: [
+//   // Creates `style` nodes from JS strings
+//   "style-loader",
+//   // Translates CSS into CommonJS
+//   "css-loader",
+//   // Compiles Sass to CSS
+//   "sass-loader",
+// ],
