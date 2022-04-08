@@ -8,8 +8,10 @@ const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: "production",
+  entry: { main: "./src/index.js" },
   output: {
     publicPath: "./",
+    filename: "[name].js",
   },
   // output: {
   //   filename: "[name].[contenthash].js",
