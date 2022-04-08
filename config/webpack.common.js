@@ -4,10 +4,10 @@ const webpack = require("webpack");
 module.exports = {
   module: {
     rules: [
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-      },
+      // {
+      //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      //   type: "asset/resource",
+      // },
       {
         test: /\.s[ac]ss$/i,
         use: [
