@@ -7,6 +7,9 @@ const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: "production",
+  output: {
+    publicPath: "/dist/",
+  },
   // output: {
   //   filename: "[name].[contenthash].js",
   //   publicPath: "/StylesApp/latest/",
