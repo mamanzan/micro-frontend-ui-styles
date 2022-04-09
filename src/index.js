@@ -1,3 +1,3 @@
-import "../scss/.Global.scss";
+//import "../scss/.Global.scss";
 
-//import("./bootstrap.js");
+import("./bootstrap.js");
