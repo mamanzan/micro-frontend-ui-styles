@@ -1,18 +1,18 @@
 const { merge } = require("webpack-merge");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+//const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+//const HtmlWebpackPlugin = require("html-webpack-plugin");
 const commonConfig = require("./webpack.common");
-const packageJson = require("../package.json");
+//const packageJson = require("../package.json");
 
-const domain = process.env.PRODUCTION_DOMAIN;
+//const domain = process.env.PRODUCTION_DOMAIN;
 
 const prodConfig = {
   mode: "production",
-  entry: { main: "./src/index.js" },
-  output: {
-    publicPath: "./",
-    filename: "[name].js",
-  },
+  // entry: { main: "./src/index.js" },
+  // output: {
+  //   publicPath: "./",
+  //   filename: "[name].js",
+  // },
   // output: {
   //   filename: "[name].[contenthash].js",
   //   publicPath: "/StylesApp/latest/",
@@ -28,11 +28,11 @@ const prodConfig = {
   //     shared: packageJson.dependencies,
   //   }),
   // ],
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     template: "./public/index.html",
+  //   }),
+  // ],
 };
 
 module.exports = merge(commonConfig, prodConfig);
