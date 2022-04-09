@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/mamanzan/micro-frontend-ui/issues"
   },
-  "homepage": "https://github.com/mamanzan/micro-frontend-ui#readme"
+  "homepage": "https://github.com/mamanzan/micro-frontend-ui#readme",
+  "dependencies": {
+    "open-iconic": "^1.1.1"
+  }
 }
