@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+* {
+  box-sizing: border-box;
+}
 :root {
   font-family: "VT323", monospace;
+  font-size: 16px;
 
   --zano-navbar-height: 2rem;
 

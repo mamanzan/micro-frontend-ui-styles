@@ -1,16 +1,33 @@
 .text-field {
   display: flex;
   align-items: center;
+
+  &__input,
+  &__clear {
+    height: 2rem;
+    border: 0.1rem solid var(--zano-gray);
+  }
   &__input {
-    padding: var(--zano-padding) 2.2rem var(--zano-padding) var(--zano-padding);
+    padding: var(--zano-padding) 2rem var(--zano-padding) var(--zano-padding);
+
+    font-size: 1rem;
   }
   &__clear {
-    margin-left: -2.2rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    margin-left: -2rem;
+    width: 2rem;
+    animation: move-in 0.5s ease forwards;
   }
   &__clear:hover {
     background-color: var(--zano-gray-light2);
     cursor: pointer;
+  }
+
+  @keyframes move-in {
+    from {
+      transform: translateX(1rem);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 }
