@@ -15,6 +15,8 @@
   --zano-padding: 0.6rem;
   --zano-padding-lg: 0.8rem;
 
+  --zano-bg-color: white;
+
   --zano-gray-dark2: hsla(0, 0%, 20%, 1);
   --zano-gray-dark1: hsla(0, 0%, 40%, 1);
   --zano-gray: hsla(0, 0%, 60%, 1);
@@ -57,3 +59,4 @@ body {
 @import "./components/LayoutSidebarMain.scss";
 @import "./components/Components.scss";
 @import "./components/TextField.scss";
+@import "./components/TextFieldSearchAhead.scss";
