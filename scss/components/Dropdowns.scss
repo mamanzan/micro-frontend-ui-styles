@@ -17,7 +17,7 @@
 
   &__list {
     position: absolute;
-    width: 100%;
+    min-width: 100%;
     border: 1px solid var(--zano-gray);
     border-top: none;
     padding: 0;
