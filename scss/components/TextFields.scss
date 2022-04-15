@@ -12,7 +12,7 @@
   &__input {
     padding: var(--zano-padding) var(--size) var(--zano-padding)
       var(--zano-padding);
-
+    width: 100%;
     font-size: 1rem;
   }
 
@@ -59,22 +59,9 @@
 
 .text-field-search-ahead {
   @include text-field;
+  display: block;
   position: relative;
   overflow: visible;
-  // font-family: var(--zano-font-family);
-  // --size: 2rem;
-
-  // &__input,
-  // &__clear {
-  //   height: var(--size);
-  //   border: 0.1rem solid var(--zano-gray);
-  // }
-  // &__input {
-  //   padding: var(--zano-padding) var(--size) var(--zano-padding)
-  //     var(--zano-padding);
-
-  //   font-size: 1rem;
-  // }
 
   &__list {
     border: 0.1rem solid var(--zano-gray);
