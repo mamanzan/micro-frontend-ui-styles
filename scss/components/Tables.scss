@@ -17,6 +17,14 @@
   // &__rows {
   //   display: block;
   // }
+  &__caption {
+    background-color: var(--zano-gray-dark1);
+    color: white;
+    font-size: 2rem;
+    padding: var(--zano-padding-lg) var(--zano-padding);
+
+    text-align: left;
+  }
 
   &__column-row {
     background-color: white;
@@ -28,7 +36,6 @@
   }
   &__column-cell:hover {
     cursor: pointer;
-    background-color: var(--zano-gray-light1);
   }
   &__column-sort {
     width: 1rem;
@@ -38,7 +45,7 @@
     display: inline-block;
   }
   &__row:nth-child(even) {
-    background-color: var(--zano-gray-light1);
+    background-color: var(--zano-gray-light3);
   }
   &__cell {
     padding: var(--zano-padding);
