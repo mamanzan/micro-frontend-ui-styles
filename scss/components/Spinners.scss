@@ -1,0 +1,110 @@
+$border-size: 3px;
+$size: 24px;
+$color: #0068b5;
+$duration: 1s;
+$delay: calc($duration / 2);
+$percent: 50%;
+$timing: linear;
+
+.square-spinner {
+  display: flex;
+  align-items: center;
+  &__square {
+    width: $size;
+    height: $size;
+    border: $border-size solid #ddd;
+    animation: rotate $timing ($duration * 5) infinite;
+
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  &__square-top,
+  &__square-right,
+  &__square-bottom,
+  &__square-left {
+    position: absolute;
+    opacity: 1;
+  }
+
+  &__square-top {
+    left: -1 * $border-size;
+    top: -1 * $border-size;
+    width: $size;
+    height: $border-size;
+    background: linear-gradient(90deg, $color $percent, #ddd $percent);
+    background-size: ($size * 2) $border-size;
+    background-position: 0 0;
+    animation: loader-top $timing $duration infinite;
+  }
+
+  &__square-right {
+    top: -1 * $border-size;
+    right: -1 * $border-size;
+    width: $border-size;
+    height: $size;
+    background: linear-gradient($color $percent, #ddd $percent);
+    background-size: $border-size ($size * 2);
+    background-position: 0 0;
+    animation: loader-right $timing $duration infinite $delay;
+  }
+
+  &__square-bottom {
+    right: -1 * $border-size;
+    bottom: -1 * $border-size;
+    width: $size;
+    height: $border-size;
+    background: linear-gradient(90deg, $color $percent, #ddd $percent);
+    background-size: ($size * 2) $border-size;
+    background-position: 0 0;
+    animation: loader-bottom $timing $duration infinite;
+  }
+
+  &__square-left {
+    left: -1 * $border-size;
+    bottom: -1 * $border-size;
+    width: $border-size;
+    height: $size;
+    background: linear-gradient($color $percent, #ddd $percent);
+    background-size: $border-size ($size * 2);
+    background-position: 0 0;
+    animation: loader-left $timing $duration infinite $delay;
+  }
+
+  &__message {
+    padding-left: var(--zano-padding);
+  }
+}
+
+@keyframes loader-top {
+  100% {
+    background-position: ($size * 2) 0;
+  }
+}
+
+@keyframes loader-right {
+  100% {
+    background-position: 0 ($size * 2);
+  }
+}
+
+@keyframes loader-bottom {
+  100% {
+    background-position: (-2 * $size) 0;
+  }
+}
+
+@keyframes loader-left {
+  100% {
+    background-position: 0 $size * -2;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
