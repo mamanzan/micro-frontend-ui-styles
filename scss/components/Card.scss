@@ -5,12 +5,14 @@
   padding: 0;
 
   &__body {
-    background: var(--zano-gray-light2);
-  }
-
-  &__body {
+    background: transparent;
     padding: 2rem;
   }
+
+  &__divider {
+    color: var(--zano-gray-light1);
+  }
+
   &__header,
   &__description {
     padding: 1rem;

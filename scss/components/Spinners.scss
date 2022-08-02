@@ -108,3 +108,39 @@ $timing: linear;
     transform: rotate(360deg);
   }
 }
+
+.square-spinner-svg {
+  $size: 24;
+
+  animation: square-spinner-rotate 5s linear infinite;
+
+  &,
+  &__background,
+  &__stroke {
+    width: #{$size}px;
+    height: #{$size}px;
+    stroke-width: #{calc($size / 5)}px;
+    fill: transparent;
+  }
+  &__background {
+    stroke: whitesmoke;
+  }
+  &__stroke {
+    stroke-dasharray: $size;
+    stroke-dashoffset: $size;
+
+    stroke: var(--zano-blue);
+    animation: square-spinner 1s linear infinite;
+  }
+
+  @keyframes square-spinner-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes square-spinner {
+    to {
+      stroke-dashoffset: -1 * $size;
+    }
+  }
+}
